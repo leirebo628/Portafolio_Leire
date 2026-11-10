@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leire Benavent Ordoñez | Portfolio SMR</title>
+  <meta name="description" content="Portfolio personal de Leire Benavent Ordoñez, estudiante de Sistemas Microinformáticos y Redes. Formación, habilidades, experiencia, proyectos y contacto.">
+  <meta name="theme-color" content="#0b1020">
+
+  <!-- Marca el documento como "con JavaScript" antes de pintar (evita parpadeos) -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Tipografías (Google Fonts). Si no hay conexión, se usan las del sistema -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Enlace de accesibilidad para saltar la navegación -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Barra de progreso de lectura -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Luz que sigue al ratón (solo en dispositivos con ratón) -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ===================== CABECERA / NAVEGACIÓN ===================== -->
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo-mark">&lt;/&gt;</span>
+        <span class="logo-text">leire.dev</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#formacion" class="nav-link">Formación</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Cambiar entre tema claro y oscuro" title="Cambiar tema">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Abrir el menú" aria-expanded="false" aria-controls="navLinks">
+          <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ===================== INICIO ===================== -->
+    <section class="hero" id="inicio">
+      <canvas id="particles" class="particles" aria-hidden="true"></canvas>
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow reveal"><span class="pulse-dot"></span> Disponible para prácticas</p>
+          <h1 class="hero-title reveal">
+            Hola, soy <span class="gradient-text">Leire</span>
+          </h1>
+          <p class="hero-roles reveal">
+            Soy <span class="typing" id="typing" aria-live="off"></span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero-desc reveal">
+            Estudiante de Sistemas Microinformáticos y Redes con ganas de aprender,
+            resolver problemas y trabajar en un entorno real de informática.
+          </p>
+
+          <div class="hero-cta reveal">
+            <a href="#proyectos" class="btn btn-primary">Ver mis proyectos <span aria-hidden="true">→</span></a>
+            <a href="#contacto" class="btn btn-ghost">Hablemos</a>
+          </div>
+
+          <!-- Cuando tengas GitHub o LinkedIn, añade aquí sus enlaces copiando el bloque del correo -->
+          <ul class="socials reveal" aria-label="Contacto rápido">
+            <li>
+              <a href="mailto:leirebenavent628@gmail.com" aria-label="Enviar un correo a Leire">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5.5A2.5 2.5 0 014.5 3h15A2.5 2.5 0 0122 5.5v13a2.5 2.5 0 01-2.5 2.5h-15A2.5 2.5 0 012 18.5v-13zm2.2.5l7.8 6.1L19.8 6H4.2zM20 7.9l-7.4 5.8a1 1 0 01-1.2 0L4 7.9v10.6a.5.5 0 00.5.5h15a.5.5 0 00.5-.5V7.9z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Avatar con iniciales. Para poner una foto: sustituye el <span> por <img src="foto.jpg" alt="Foto de Leire"> -->
+        <div class="hero-visual reveal">
+          <div class="avatar-wrap" data-tilt>
+            <div class="avatar-ring" aria-hidden="true"></div>
+            <div class="avatar" role="img" aria-label="Avatar con las iniciales LB">
+              <span>LB</span>
+            </div>
+            <span class="float-badge badge-1" aria-hidden="true">Redes</span>
+            <span class="float-badge badge-2" aria-hidden="true">Linux</span>
+            <span class="float-badge badge-3" aria-hidden="true">Hardware</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#sobre-mi" class="scroll-hint" aria-label="Bajar a la sección Sobre mí">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ===================== SOBRE MÍ ===================== -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">01 · Sobre mí</span>
+          <h2 class="section-title">Un poco más sobre mí</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Soy <strong>Leire Benavent Ordoñez</strong> y estudio el
+              <strong>Grado Medio de Sistemas Microinformáticos y Redes (SMR)</strong>.
+              Me interesa entender cómo funcionan los equipos por dentro, cómo se conectan
+              entre sí y cómo se solucionan sus problemas.
+            </p>
+            <p>
+              Además de la formación, tengo experiencia trabajando de cara al público en la
+              sección de electrónica de un hipermercado, así que estoy acostumbrada a
+              <strong>escuchar al cliente</strong>, explicar cosas técnicas de forma sencilla
+              y trabajar en equipo.
+            </p>
+
+            <div class="goals">
+              <h3>🎯 Objetivos profesionales</h3>
+              <ul>
+                <li>Terminar el ciclo de SMR con buenos resultados.</li>
+                <li>Realizar las prácticas en una empresa de soporte técnico o sistemas.</li>
+                <li>Seguir formándome en administración de sistemas y redes.</li>
+              </ul>
+            </div>
+
+            <ul class="interests" aria-label="Intereses">
+              <li>🖥️ Hardware</li>
+              <li>🌐 Redes</li>
+              <li>🐧 Linux</li>
+              <li>🛡️ Seguridad</li>
+            </ul>
+          </div>
+
+          <div class="stats reveal">
+            <div class="stat-card" data-tilt>
+              <span class="stat-num" data-count="2">0</span>
+              <span class="stat-label">Meses de experiencia laboral</span>
+            </div>
+            <div class="stat-card" data-tilt>
+              <span class="stat-num" data-count="6">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Prácticas de clase</span>
+            </div>
+            <div class="stat-card" data-tilt>
+              <span class="stat-num" data-count="8">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Herramientas que uso</span>
+            </div>
+            <div class="stat-card" data-tilt>
+              <span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span>
+              <span class="stat-label">Ganas de aprender</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FORMACIÓN ===================== -->
+    <section class="section section-alt" id="formacion">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">02 · Formación</span>
+          <h2 class="section-title">Formación académica</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card" data-tilt>
+              <span class="timeline-date">En curso</span>
+              <h3>Grado Medio en Sistemas Microinformáticos y Redes (SMR)</h3>
+              <p class="timeline-place">Formación Profesional · Informática y Comunicaciones</p>
+              <p>Montaje y mantenimiento de equipos, sistemas operativos, redes locales, aplicaciones ofimáticas, seguridad informática y aplicaciones web.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card" data-tilt>
+              <span class="timeline-date">Completada</span>
+              <h3>Educación Secundaria Obligatoria (ESO)</h3>
+              <p class="timeline-place">Educación Secundaria</p>
+              <p>Base académica en matemáticas, tecnología e idiomas. Primer contacto con la informática.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== HABILIDADES ===================== -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">03 · Habilidades</span>
+          <h2 class="section-title">Habilidades técnicas y personales</h2>
+        </header>
+
+        <div class="skills-grid">
+          <!-- Habilidades técnicas: cambia data-level (0-100) por tu nivel real -->
+          <div class="skills-col reveal">
+            <h3 class="skills-title">💻 Técnicas</h3>
+            <ul class="skill-list">
+              <li class="skill">
+                <div class="skill-top"><span>Montaje y reparación de equipos</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="80"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>Windows</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="80"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>Linux</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="60"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>Redes y cableado</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="70"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>Virtualización</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="60"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>Ofimática</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="85"></span></div>
+              </li>
+              <li class="skill">
+                <div class="skill-top"><span>HTML y CSS</span><span class="skill-pct">0%</span></div>
+                <div class="bar" role="presentation"><span data-level="50"></span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Habilidades personales -->
+          <div class="skills-col reveal">
+            <h3 class="skills-title">🤝 Personales</h3>
+            <ul class="soft-grid">
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">🧩</span><strong>Resolución de problemas</strong><small>Buscar la causa y arreglarla</small></li>
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">👥</span><strong>Trabajo en equipo</strong><small>Colaboración y respeto</small></li>
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">💬</span><strong>Comunicación</strong><small>Explicar lo técnico con claridad</small></li>
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">🤗</span><strong>Atención al cliente</strong><small>Trato cercano y paciente</small></li>
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">🚀</span><strong>Autonomía</strong><small>Aprender por mi cuenta</small></li>
+              <li class="soft-card" data-tilt><span class="soft-ico" aria-hidden="true">⏱️</span><strong>Responsabilidad</strong><small>Cumplir horarios y plazos</small></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Herramientas (chips) -->
+        <ul class="chips reveal" aria-label="Herramientas que utilizo">
+          <li>Windows</li><li>Ubuntu</li><li>VirtualBox</li><li>Cisco Packet Tracer</li><li>Microsoft Office</li><li>VS Code</li><li>PuTTY</li><li>Wireshark</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCIA ===================== -->
+    <section class="section section-alt" id="experiencia">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">04 · Experiencia</span>
+          <h2 class="section-title">Experiencia</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card" data-tilt>
+              <span class="timeline-date">2 meses</span>
+              <h3>Sección de Electro</h3>
+              <p class="timeline-place">Carrefour</p>
+              <p>Atención directa al cliente, asesoramiento sobre productos electrónicos y electrodomésticos, y colaboración con el equipo de la sección.</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card" data-tilt>
+              <span class="timeline-date">Próximamente</span>
+              <h3>Prácticas en empresa (FCT)</h3>
+              <p class="timeline-place">Buscando empresa · Abierta a propuestas</p>
+              <p>Con muchas ganas de aplicar lo aprendido en un entorno real de soporte técnico o sistemas.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== PROYECTOS ===================== -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">05 · Proyectos</span>
+          <h2 class="section-title">Proyectos desarrollados</h2>
+          <p class="section-sub">Prácticas del ciclo. Filtra por categoría y pulsa «Detalles» para saber más.</p>
+        </header>
+
+        <!-- Filtros -->
+        <div class="filters reveal" role="group" aria-label="Filtrar proyectos">
+          <button class="filter active" type="button" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter" type="button" data-filter="hardware" aria-pressed="false">Hardware</button>
+          <button class="filter" type="button" data-filter="redes" aria-pressed="false">Redes</button>
+          <button class="filter" type="button" data-filter="sistemas" aria-pressed="false">Sistemas</button>
+          <button class="filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+        </div>
+
+        <!-- Tarjetas de proyectos. IMPORTANTE: son ejemplos típicos de SMR; cámbialos por tus prácticas reales -->
+        <div class="projects-grid" id="projectsGrid">
+
+          <article class="project-card reveal" data-category="hardware" data-tilt>
+            <div class="project-thumb thumb-1" aria-hidden="true"><span>🖥️</span></div>
+            <div class="project-body">
+              <h3>Montaje de un PC desde cero</h3>
+              <p>Ensamblaje de un ordenador, configuración de la BIOS/UEFI e instalación del sistema operativo.</p>
+              <ul class="tags"><li>Hardware</li><li>BIOS/UEFI</li><li>Diagnóstico</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Práctica de montaje completo de un equipo: comprobar la compatibilidad de componentes, ensamblarlos y dejar el equipo funcionando.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> identificar componentes, trabajar con medidas antiestáticas y ordenar el cableado.</li>
+                <li><strong>Reto principal:</strong> diagnosticar fallos de arranque.</li>
+                <li><strong>Resultado:</strong> equipo estable y probado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="redes" data-tilt>
+            <div class="project-thumb thumb-2" aria-hidden="true"><span>🌐</span></div>
+            <div class="project-body">
+              <h3>Red local con Packet Tracer</h3>
+              <p>Diseño y simulación de una red con subredes, switches y router.</p>
+              <ul class="tags"><li>Packet Tracer</li><li>TCP/IP</li><li>Subredes</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Simulación de una red de oficina con varios departamentos separados en subredes.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> direccionamiento IP, máscaras de subred y comprobación con ping.</li>
+                <li><strong>Reto principal:</strong> que todos los equipos se comunicaran correctamente.</li>
+                <li><strong>Resultado:</strong> red funcionando con su esquema documentado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="sistemas redes" data-tilt>
+            <div class="project-thumb thumb-3" aria-hidden="true"><span>🐧</span></div>
+            <div class="project-body">
+              <h3>Servidor Linux en máquina virtual</h3>
+              <p>Instalación de Ubuntu Server con acceso remoto por SSH y servicios básicos.</p>
+              <ul class="tags"><li>Linux</li><li>VirtualBox</li><li>SSH</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Instalación y configuración de un servidor Linux dentro de VirtualBox.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> comandos básicos, gestión de paquetes y servicios.</li>
+                <li><strong>Reto principal:</strong> configurar la red de la máquina virtual.</li>
+                <li><strong>Resultado:</strong> servidor accesible por SSH.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="sistemas" data-tilt>
+            <div class="project-thumb thumb-4" aria-hidden="true"><span>🪟</span></div>
+            <div class="project-body">
+              <h3>Usuarios y permisos en Windows</h3>
+              <p>Gestión de usuarios, grupos y carpetas compartidas con distintos permisos.</p>
+              <ul class="tags"><li>Windows</li><li>Usuarios</li><li>Permisos</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Configuración de un entorno Windows con varios usuarios y recursos compartidos.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> permisos de carpeta y buenas prácticas de seguridad.</li>
+                <li><strong>Reto principal:</strong> dar a cada usuario solo el acceso que necesita.</li>
+                <li><strong>Resultado:</strong> estructura de carpetas segura.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="sistemas" data-tilt>
+            <div class="project-thumb thumb-5" aria-hidden="true"><span>💾</span></div>
+            <div class="project-body">
+              <h3>Plan de copias de seguridad</h3>
+              <p>Diseño y prueba de copias de seguridad con restauración comprobada.</p>
+              <ul class="tags"><li>Backups</li><li>Seguridad</li><li>Recuperación</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Plan para proteger la información de una pequeña oficina y comprobar que se puede recuperar.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> tipos de copia y la regla 3-2-1.</li>
+                <li><strong>Reto principal:</strong> comprobar que la restauración funcionaba.</li>
+                <li><strong>Resultado:</strong> procedimiento documentado y probado.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="web" data-tilt>
+            <div class="project-thumb thumb-6" aria-hidden="true"><span>💼</span></div>
+            <div class="project-body">
+              <h3>Este portfolio</h3>
+              <p>La web que estás viendo: tema claro/oscuro, animaciones y formulario validado.</p>
+              <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li></ul>
+              <div class="project-actions">
+                <button class="btn btn-small btn-primary" type="button" data-open-modal>Detalles</button>
+              </div>
+            </div>
+            <div class="project-extra" hidden>
+              <p>Mi portfolio personal, hecho con tres ficheros independientes y sin frameworks.</p>
+              <ul>
+                <li><strong>Qué aprendí:</strong> maquetación responsive, animaciones CSS y manipulación del DOM.</li>
+                <li><strong>Reto principal:</strong> que fuera vistosa y a la vez accesible.</li>
+                <li><strong>Resultado:</strong> mi carta de presentación para buscar prácticas.</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACTO ===================== -->
+    <section class="section section-alt" id="contacto">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-kicker">06 · Contacto</span>
+          <h2 class="section-title">¿Hablamos?</h2>
+          <p class="section-sub">Si tienes una propuesta de prácticas, una oferta o simplemente quieres saludar, escríbeme.</p>
+        </header>
+
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <ul class="contact-list">
+              <li>
+                <span class="contact-ico" aria-hidden="true">✉️</span>
+                <div>
+                  <small>Correo</small>
+                  <a href="mailto:leirebenavent628@gmail.com" id="emailText">leirebenavent628@gmail.com</a>
+                </div>
+                <button class="copy-btn" id="copyEmail" type="button" aria-label="Copiar correo al portapapeles">Copiar</button>
+              </li>
+              <li>
+                <span class="contact-ico" aria-hidden="true">🎓</span>
+                <div><small>Estudios</small><span>Grado Medio SMR</span></div>
+              </li>
+              <li>
+                <span class="contact-ico" aria-hidden="true">🎯</span>
+                <div><small>Busco</small><span>Prácticas en informática y sistemas</span></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Formulario: valida los datos y abre tu aplicación de correo con el mensaje preparado -->
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Tu nombre" required>
+              <p class="error" id="nameError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="tu@ejemplo.com" required>
+              <p class="error" id="emailError" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="message">Mensaje <span class="counter" id="counter">0 / 500</span></label>
+              <textarea id="message" name="message" rows="5" maxlength="500" placeholder="Escribe aquí tu mensaje..." required></textarea>
+              <p class="error" id="messageError" role="alert"></p>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" id="submitBtn">
+              <span class="btn-label">Enviar mensaje</span> <span aria-hidden="true">🚀</span>
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Leire Benavent Ordoñez · Hecho con HTML, CSS y JavaScript 💙</p>
+      <a href="#inicio" class="footer-top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Botón para volver arriba -->
+  <button class="to-top" id="toTop" type="button" aria-label="Volver arriba">↑</button>
+
+  <!-- Mensaje emergente (toast) -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Ventana modal de detalles de proyecto -->
+  <dialog class="modal" id="projectModal" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose" type="button" aria-label="Cerrar">✕</button>
+      <div class="modal-thumb" id="modalThumb" aria-hidden="true"></div>
+      <h3 id="modalTitle"></h3>
+      <ul class="tags" id="modalTags"></ul>
+      <div class="modal-content" id="modalContent"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </dialog>
+
+</body>
+</html>
